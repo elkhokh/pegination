@@ -54,6 +54,3 @@ require_once 'Database/migration.php';
 </div>
 
 <?php require_once 'inc/footer.php'; ?>
-<!-- git remote add origin https://github.com/elkhokh/pegination.git
-git branch -M master
-git push -u origin master -->
