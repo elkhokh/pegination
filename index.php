@@ -1,7 +1,7 @@
 <?php
 require_once 'inc/header.php';
-require_once 'Database/config.php';
-require_once 'Database/db.php';
+// require_once 'Database/config.php';
+// require_once 'Database/db.php';
 require_once 'Database/migration.php';
 ?>
 
@@ -48,7 +48,6 @@ require_once 'Database/migration.php';
                     <a class="page-link" href="<?="?page=". $i ?>"><?= $i?></a>
                 </li>
             <?php endfor ; ?>
-                
                 <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
             </ul>
         </nav>

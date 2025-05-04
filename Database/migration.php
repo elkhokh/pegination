@@ -3,7 +3,7 @@ require_once 'db.php';
 
 
 // pagination idea !!
-// $page = $_GET['page']?? 1 ;  /* 2 3 4 5 6 8 9 10 */ 
+// $page = is_numeric($_GET['page'])? (int)$_GET['page']: 1 ;  /* 2 3 4 5 6 8 9 10 */ 
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 
 $data_limit = 10;
