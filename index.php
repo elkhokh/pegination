@@ -37,15 +37,19 @@ require_once 'Database/migration.php';
         </div>
 
         <!-- Pagination -->
-        <nav class="d-flex justify-content-center mt-4">
+        <nav class="d-flex justify-content-center ">
             <ul class="pagination">
-                <li class="page-item disabled">
+                <!-- <li class="page-item disabled">
                     <span class="page-link">Previous</span>
+                </li> -->
+            <?php for($i=1 ; $i <= $page_number ; $i++): ?>
+                <!-- <li class="page-item active"><span class="page-link"></span></li> -->
+                <li class="page-item<?= $i == $_GET['page'] ? ' active' : '' ?>">
+                    <a class="page-link" href="<?="?page=". $i ?>"><?= $i?></a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><span class="page-link">2</span></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <?php endfor ; ?>
+                
+                <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
             </ul>
         </nav>
     <?php else: ?>
@@ -54,3 +58,6 @@ require_once 'Database/migration.php';
 </div>
 
 <?php require_once 'inc/footer.php'; ?>
+
+
+
