@@ -3,7 +3,8 @@ require_once 'db.php';
 
 
 // pagination idea !!
-$page = $_GET['page']?? 1 ;  /* 2 3 4 5 6 8 9 10 */ 
+// $page = $_GET['page']?? 1 ;  /* 2 3 4 5 6 8 9 10 */ 
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 
 $data_limit = 10;
 
@@ -21,8 +22,3 @@ $select = $conn->query($sql);
 
 $products = $select->fetchAll(PDO::FETCH_OBJ);
 
-
-
-// echo "<pre>";
-// print_r($res);
-// echo "</pre>";

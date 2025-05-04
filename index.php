@@ -44,7 +44,7 @@ require_once 'Database/migration.php';
                 </li> -->
             <?php for($i=1 ; $i <= $page_number ; $i++): ?>
                 <!-- <li class="page-item active"><span class="page-link"></span></li> -->
-                <li class="page-item<?= $i == $_GET['page'] ? ' active' : '' ?>">
+                <li class="page-item<?= $i == $page ? ' active' : '' ?>">
                     <a class="page-link" href="<?="?page=". $i ?>"><?= $i?></a>
                 </li>
             <?php endfor ; ?>
