@@ -17,8 +17,8 @@ $count_product =$conn ->query($count_query) -> fetch()['count_product'] ; //fetc
 $page_number = ceil($count_product / $data_limit); // 10
     // print_r($page_number);
 $sql = " SELECT * FROM `products` LIMIT 10  OFFSET $offset ";
-
+//create obj 
 $select = $conn->query($sql);
-
+//fetch data from database as object 
 $products = $select->fetchAll(PDO::FETCH_OBJ);
 

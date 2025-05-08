@@ -1,7 +1,5 @@
 <?php
 require_once 'inc/header.php';
-// require_once 'Database/config.php';
-// require_once 'Database/db.php';
 require_once 'Database/migration.php';
 ?>
 
